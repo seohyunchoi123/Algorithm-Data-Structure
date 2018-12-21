@@ -39,5 +39,6 @@ def solution(participant, completion):
         idx+=1
     return list(dic.keys())[idx]
 
+# Method to solve : Hash Table
 # Time Complexity : O(n)
 # Space Complexity : O(n)
