@@ -25,7 +25,7 @@
 
 def solution(participant, completion):
     dic=dict()
-    for person in participant :
+    for person in participant : # make an hash table
         if person not in dic:
             dic[person] = 1
         else:
@@ -34,7 +34,10 @@ def solution(participant, completion):
         dic[person] -= 1
     idx=0
     for chk in dic.values():
-        if chk == 1:
+        if chk == 1: # answer is the value whose key is stil 1
             break
         idx+=1
     return list(dic.keys())[idx]
+
+# Time Complexity : O(n)
+# Space Complexity : O(n)
