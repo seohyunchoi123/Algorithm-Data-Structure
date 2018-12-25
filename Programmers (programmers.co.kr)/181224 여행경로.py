@@ -12,8 +12,11 @@
 # 모든 도시를 방문할 수 없는 경우는 주어지지 않습니다.
 
 
-## >> Finding all possible routes using DFS, and get the right answer. If nothing is founded, it would return []
+## Anlaysis ##
+# Sorting candidates, explore the map using DFS and return the first right answer !
+
 from collections import defaultdict
+
 
 def dfs(dic, begin, visited):
     visited.append(begin)
@@ -22,35 +25,29 @@ def dfs(dic, begin, visited):
         if value:
             is_null = False
     if is_null: # No more any ticket !
-        results.append(visited.copy()) # COPY !
-        # return visited # This doesn't work
-    elif not dic[begin]: # Still have other ticket, but no more available ticket in this airport
-        pass
-    else:
-        for i in range(len(dic[begin])):
-            tmp = dic[begin].pop(i)
-            dfs(dic, tmp, visited)
-            dic[begin].insert(i, tmp)
-            visited.pop()
+        return visited
+    for i in range(len(dic[begin])):
+        tmp = dic[begin].pop(i)
+        ans = dfs(dic, tmp, visited.copy())
+        dic[begin].insert(i, tmp)
+        if ans: # Return only when they have specific answer !
+            return ans
 
 
 def solution(tickets):
     dic = defaultdict(list) # ticket hash table
     for ticket in tickets:
-        dpt = ticket[0]
-        arv = ticket[1]
+        dpt, arv = ticket
         dic[dpt].append(arv)
-    dfs(dic, 'ICN', [])
-    if results:
-        return sorted(results)[0]
-    else:
-        return []
+        dic[dpt].sort()
+    answer = dfs(dic, 'ICN', [])
+    return answer
 
 
 case_1 = [['ICN', 'SFO'], ['ICN', 'ATL'], ['SFO', 'ATL'], ['ATL', 'ICN'], ['ATL', 'SFO']]
 case_2 = [['ICN', 'B'], ['ICN', 'C'], ['B', 'C']]
-results = []
-answer = solution(case_1)
+case_3 = [['ICN', 'B'], ['ICN', 'C'], ['C', 'ICN']]
+answer = solution(case_3)
 print(answer)
 
 # Method to solve : DFS
