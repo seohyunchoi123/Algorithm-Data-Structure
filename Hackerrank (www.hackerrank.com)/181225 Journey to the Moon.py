@@ -69,7 +69,7 @@ def dfs(n, astronaut):
 def journeyToMoon(n, astronaut):
     results = dfs(n, astronaut)
     answer = 0
-    prev_sum = sum(results) # Applying Dynamic Programming for lessening time complexity
+    prev_sum = sum(results) # Applying Dynamic Programming for lessening time complexity so you don't need to sum up all the elements in the list for 100,000 times
     for i in range(len(results) - 1):
         answer += results[i] * (prev_sum - results[i])
         prev_sum -= results[i]
