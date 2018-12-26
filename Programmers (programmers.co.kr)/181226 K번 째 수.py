@@ -28,6 +28,6 @@ def solution(array, commands):
 
 # Method to Solve : Sorting
 # Time Complexity : O(nlogn)
-# Space Complexity :O(n)
+# Space Complexity : O(n)
 
 
