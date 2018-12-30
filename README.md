@@ -1,5 +1,5 @@
 # Algorithm-Data-Structure
-I have studied in multiple web sites of,
+I have studied in multiple websites of,
 
 Baekjoon (www.acmicpc.net) during 2018.08 ~ 2018.11 <br/>
 Coding Dojang (www.codingdojang.com) during 2018.01 ~ 2018.05 <br/>
