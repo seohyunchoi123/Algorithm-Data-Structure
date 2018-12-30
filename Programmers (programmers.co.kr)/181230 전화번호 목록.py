@@ -28,3 +28,7 @@ def solution(phone_book):
         if phone_book[i + 1].startswith(phone_book[i]):
             answer = False
     return answer
+
+# Method to Solve : Sorting
+# Time Complexity : O(N)
+# Space Complexity : O(N)
