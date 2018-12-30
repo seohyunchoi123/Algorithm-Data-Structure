@@ -19,7 +19,6 @@
 
 from collections import defaultdict
 
-
 def solution(phone_book):
     answer = True
     phone_book = sorted(phone_book)
