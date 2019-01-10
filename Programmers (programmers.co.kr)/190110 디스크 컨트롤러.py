@@ -73,5 +73,5 @@ def solution(jobs):
     return int(answer/n_done)
 
 # Method to Solve : Priority Queue
-# Time Complexity :
-# Space Complexity :
+# Time Complexity : O(N^2)
+# Space Complexity : O(N)
