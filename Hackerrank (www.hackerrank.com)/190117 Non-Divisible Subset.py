@@ -9,10 +9,10 @@ def nonDivisibleSubset(k, S):
     for i in range(1, k//2 + 1):
         if i == k/2:
             if dic[i] > 0 :
-                dic[i] = 1 # it should not be more than 2
+                dic[i] = 1 # it should not be more than 1
         elif i == 0:
             if dic[0] > 0:
-                dic[0] = 1  # it should not be more than 2
+                dic[0] = 1  # it should not be more than 1
         elif dic[i] > dic[k-i]:
             dic[k-i] = 0
         else:
