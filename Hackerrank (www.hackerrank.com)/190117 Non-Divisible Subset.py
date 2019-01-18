@@ -23,5 +23,7 @@ def nonDivisibleSubset(k, S):
     return result
 
 # Method to Solve : Hash
-# Time Complexity : O(1)
+# Time Complexity : O(n)
 # Space Complexity : O(n)
+
+# Restraint : 0 <= n <= 100
