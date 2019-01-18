@@ -6,7 +6,7 @@ from collections import Counter, defaultdict
 def nonDivisibleSubset(k, S):
     S = list(map(lambda x : x % k, S))
     dic = defaultdict(lambda : 0, Counter(S)) # This size is always less than k( < 100).
-    for i in range(1, k//2 + 1):
+    for i in range(k//2 + 1):
         if i == k/2:
             if dic[i] > 0 :
                 dic[i] = 1 # it should not be more than 1
