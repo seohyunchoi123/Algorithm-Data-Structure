@@ -1,3 +1,4 @@
+# Question Link : https://www.hackerrank.com/challenges/queens-attack-2/problem
 
 def queensAttack(n, k, r_q, c_q, obstacles):
     possible = 2 * (n - 1) # horizontally, vertically
@@ -38,3 +39,7 @@ def queensAttack(n, k, r_q, c_q, obstacles):
     return possible - sum(obs_cand)
 
 print(queensAttack(8, 1, 4, 4 ,[(3,5), (2,6)]))
+
+# Method to Solve : If conditions. No specific data structure or algorithmic methods
+# Time Complexity : O(n)
+# Space Complexity : O(1)
