@@ -56,7 +56,7 @@ def twoPluses(grid):
             if is_conflicted(cand_1, cand_2):
                 cand_1_copied = cand_1.copy() # if not copied, the original elements would be changed. WARNING!
                 cand_2_copied = cand_2.copy()
-                while is_conflicted(cand_1_copied, cand_2_copied): # POINT!! if two are conflicted, you should check other results after lessening their lengths until they aren't conflicted anymore.
+                while is_conflicted(cand_1_copied, cand_2_copied): # POINT!! if two are conflicted, you should check other results after lessening their lengths one by one until they aren't conflicted anymore.
                     if cand_1_copied[2] >= cand_2_copied[2]:
                         cand_1_copied[2] -= 1
                     else:
